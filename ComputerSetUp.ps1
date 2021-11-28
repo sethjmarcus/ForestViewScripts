@@ -16,7 +16,6 @@ Function Get-Folder($initialDirectory="")
 }
 $downloadPath = Get-Folder
 
-
 # Headers to make requests and to download. Talk to Seth or Google "Http headers" for more info
 $NiniteHeaders = @{
 	'authority'= 'ninite.com'
@@ -50,17 +49,10 @@ $AdobeHeaders = @{
 
 # Actually making the requests/downloading
 Invoke-WebRequest 'https://ninite.com/adoptjava8-chrome-windirstat/ninite.exe' -Headers $NiniteHeaders -OutFile "$($downloadPath)\NiniteChromeJava.exe"
-Invoke-WebRequest 'https://admdownload.adobe.com/bin/live/readerdc64_en_jd_crd_install.exe' -Headers $AdobeHeaders -OutFile "$($downloadPath)\NiniteAdobe.exe"
-Invoke-WebRequest 'http://reliablehealth.com/visualemr.exe' -OutFile "$($downloadPath)\Visaul.exe"
+Invoke-WebRequest 'https://admdownload.adobe.com/bin/live/readerdc64_en_jd_crd_install.exe' -Headers $AdobeHeaders -OutFile "$($downloadPath)\Adobe.exe"
+Invoke-WebRequest 'http://reliablehealth.com/visualemr.exe' -OutFile "$($downloadPath)\Visual.exe"
 
-
-# Running these .exe's
-Invoke-Expression "$($downloadPath)\NiniteChromeJava.exe"
-Invoke-Expression "$($downloadPath)\NiniteAdobe.exe"
-Invoke-Expression "$($downloadPath)\Visaul.exe"
-
-
-# Configuring Java to put Visaul in the Trusted Sites List
+# Configuring Java to put Visual in the Trusted Sites List
 if (!(test-path -Path "$env:USERPROFILE\AppData\LocalLow\Sun\Java\Deployment\security\exception.sites"))  {  
    New-Item -Path "$env:USERPROFILE\AppData\LocalLow\Sun\Java\Deployment\security\exception.sites" -ItemType File  
 }  
@@ -72,3 +64,8 @@ if (! (select-string -quiet $site $javafile)) {
 
 # Turns off "Let Internet Explorer open sites in Microsoft Edge"
 Set-Itemproperty -path 'HKCU:\SOFTWARE\Microsoft\Edge\IEToEdge'-name 'RedirectionMode' -value '0'
+
+# Running these .exe's
+Invoke-Expression "$($downloadPath)\Adobe.exe"
+Invoke-Expression "$($downloadPath)\NiniteChromeJava.exe"
+Invoke-Expression "$($downloadPath)\Visual.exe"
