@@ -66,6 +66,6 @@ if (! (select-string -quiet $site $javafile)) {
 Set-Itemproperty -path 'HKCU:\SOFTWARE\Microsoft\Edge\IEToEdge'-name 'RedirectionMode' -value '0'
 
 # Running these .exe's
-Invoke-Expression "$($downloadPath)\Adobe.exe"
-Invoke-Expression "$($downloadPath)\NiniteChromeJava.exe"
-Invoke-Expression "$($downloadPath)\Visual.exe"
+Start-Process -FilePath "$($downloadPath)\Adobe.exe"
+Start-Process -FilePath "$($downloadPath)\NiniteChromeJava.exe"
+Start-Process -FilePath "$($downloadPath)\Visual.exe"
