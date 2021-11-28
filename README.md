@@ -7,8 +7,8 @@ Scripts for common/useful/boring things at Forest View
 2. Modify the target of the shortcut
     1. Right click on the shortcut, set the target to something along the lines of:
     ```
-    C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "C:\Users\sethj\Desktop\DownloadChromeAndJavaNinite.ps1"
+    C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File "<location-accessible-to-everyone>\ComputerSetUp.ps1"
     ```
     2. This should work on all Windows machines, as PowerShell should be located there for everyone
 ### Once for every machine
-Assuming the previous section has been completed, all you need to do is run the script by double clicking.
+Assuming the previous section has been completed, all you need to do is run the script by double clicking the shortcut.
