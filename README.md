@@ -11,4 +11,4 @@ Scripts for common/useful/boring things at Forest View
     ```
     2. This should work on all Windows machines, as PowerShell should be located there for everyone
 ### Once for every machine
-Assuming the previous section has been completed, all you need to do is run the script
+Assuming the previous section has been completed, all you need to do is run the script by double clicking.
