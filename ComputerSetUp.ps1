@@ -21,12 +21,12 @@ $downloadPath = Get-Folder
 $NiniteHeaders = @{
 	'authority'= 'ninite.com'
 	'method'= 'GET'
-	'path'= '/adoptjava8-chrome/ninite.exe'
+	'path'= '/adoptjava8-chrome-windirstat/ninite.exe'
 	'scheme'= 'https'
 	'accept'= 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
 	'accept-encoding'= 'gzip, deflate, br'
 	'accept-language'= 'en-US,en;q=0.9'
-	'referer'= 'https://ninite.com/adoptjava8-chrome/'
+	'referer'= 'https://ninite.com/adoptjava8-chrome-windirstat/'
 	'sec-fetch-dest'= 'document'
 	'sec-fetch-mode'= 'navigate'
 	'sec-fetch-site'= 'same-origin'
@@ -49,7 +49,7 @@ $AdobeHeaders = @{
 }
 
 # Actually making the requests/downloading
-Invoke-WebRequest 'https://ninite.com/adoptjava8-chrome/ninite.exe' -Headers $NiniteHeaders -OutFile "$($downloadPath)\NiniteChromeJava.exe"
+Invoke-WebRequest 'https://ninite.com/adoptjava8-chrome-windirstat/ninite.exe' -Headers $NiniteHeaders -OutFile "$($downloadPath)\NiniteChromeJava.exe"
 Invoke-WebRequest 'https://admdownload.adobe.com/bin/live/readerdc64_en_jd_crd_install.exe' -Headers $AdobeHeaders -OutFile "$($downloadPath)\NiniteAdobe.exe"
 Invoke-WebRequest 'http://reliablehealth.com/visualemr.exe' -OutFile "$($downloadPath)\Visaul.exe"
 
