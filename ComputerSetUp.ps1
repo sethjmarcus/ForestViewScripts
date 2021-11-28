@@ -54,6 +54,12 @@ Invoke-WebRequest 'https://admdownload.adobe.com/bin/live/readerdc64_en_jd_crd_i
 Invoke-WebRequest 'http://reliablehealth.com/visualemr.exe' -OutFile "$($downloadPath)\Visaul.exe"
 
 
+# Running these .exe's
+Invoke-Expression "$($downloadPath)\NiniteChromeJava.exe"
+Invoke-Expression "$($downloadPath)\NiniteAdobe.exe"
+Invoke-Expression "$($downloadPath)\Visaul.exe"
+
+
 # Configuring Java to put Visaul in the Trusted Sites List
 if (!(test-path -Path "$env:USERPROFILE\AppData\LocalLow\Sun\Java\Deployment\security\exception.sites"))  {  
    New-Item -Path "$env:USERPROFILE\AppData\LocalLow\Sun\Java\Deployment\security\exception.sites" -ItemType File  
