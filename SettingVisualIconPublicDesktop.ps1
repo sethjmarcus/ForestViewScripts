@@ -1,7 +1,7 @@
 ﻿set executionpolicy bypass –force
 
 $desktop = "C:\Users\Public\Desktop" 
-if(!Test-Path $desktopA){
+if(!Test-Path $desktop){
     $desktop = "C:\Users\Public\Public Desktop"
 }
 
