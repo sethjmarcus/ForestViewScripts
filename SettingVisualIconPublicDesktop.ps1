@@ -1,7 +1,7 @@
-﻿'Import-Module !Microsoft.PowerShell.Management'
-set executionpolicy bypass –force
+﻿set executionpolicy bypass –force
 
 $desktop = "C:\Users\Public\Desktop"
+# Why I couldn't test the path in the if I don't know
 $fileExists = Test-Path $desktop
 if(!$fileExists){
     $desktop = "C:\Users\Public\Public Desktop"
@@ -11,6 +11,7 @@ if(!$fileExists){
 $SourceVisualEMR = "C:\rhs\visual\emr\amd64\ie8\Visual_IE8.bat"
 $ShortcutVisualEMR = "$($desktop)\VisaulEMR.lnk"
 
+# Configuring the shortcut
 $WScriptObj = New-Object -ComObject ("WScript.Shell")
 $shortcut = $WscriptObj.CreateShortcut($ShortcutVisualEMR)
 $shortcut.TargetPath = $SourceVisualEMR
