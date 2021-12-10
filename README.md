@@ -27,5 +27,5 @@ Assuming the previous steps have been completed, all that remains to be done is 
 3. There is no way to not have to "okay" the running of the .exe's, for as some guy on the Internet said, "If you could bypass this, every malware ever would do so."
 4. The following tasks  regarding VisualEMR will also need research:
     1. Adding VisualEMR to “Compatibility View Settings" in Internet Explorer.
-        1. See 1a above. Same applies here.
+        1. See 1i above. Same applies here.
 5. Automating steps 45 and 49 of [this](https://docs.google.com/document/d/1zjRuDJZ9edF4uzdXzuZWPIB-RvldM5An2VRJ51vOpL4/edit?usp=sharing) document.
