@@ -23,9 +23,9 @@ Assuming the previous steps have been completed, all that remains to be done is 
     2. Which parts should be hidden remains to be determined, but something that does need to be figured out.
 ### Other tasks
 1. Automating the resetting of the default apps needs to be researched further.
-2. There is no way to not have to "okay" the running of the .exe's, for as some guy on the Internet said, "If you could bypass this, every malware ever would do so."
-3. The following tasks  regarding VisualEMR will also need research:
-    1. Making the icon visible for all users immediately (i.e. putting it onto the public desktop).
-    2. Adding VisualEMR to “Compatibility View Settings" in Internet Explorer.
-4. Automating steps 45 and 49 of [this](https://docs.google.com/document/d/1zjRuDJZ9edF4uzdXzuZWPIB-RvldM5An2VRJ51vOpL4/edit?usp=sharing) document.
-5. Mapping network drives (Cliffside only).
+    1. This does not appear to be possible without extreme hacky-ness. Is not a stable long term solution.
+3. There is no way to not have to "okay" the running of the .exe's, for as some guy on the Internet said, "If you could bypass this, every malware ever would do so."
+4. The following tasks  regarding VisualEMR will also need research:
+    1. Adding VisualEMR to “Compatibility View Settings" in Internet Explorer.
+        1. See 1a above. Same applies here.
+5. Automating steps 45 and 49 of [this](https://docs.google.com/document/d/1zjRuDJZ9edF4uzdXzuZWPIB-RvldM5An2VRJ51vOpL4/edit?usp=sharing) document.
