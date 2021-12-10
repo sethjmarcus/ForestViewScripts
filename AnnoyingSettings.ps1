@@ -1,7 +1,7 @@
-﻿# Disables "Suggest ways I can finish setting up my device to get the most out of windows"
- 
+﻿# Disables "Suggest ways I can finish setting up my device to get the most out of windows". This one is not working.
+# Can't find the new path in the registry
 If (!(Test-Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement")) {
-   New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" | Out-Null
+   New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" -Name UserProfileEngagement
 }
 Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\UserProfileEngagement" -Name "ScoobeSystemSettingEnabled" -Value 0
 
@@ -29,3 +29,4 @@ Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Advertis
 
 # Disables windows 10 background apps
 Reg Add HKCU\Software\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications /v GlobalUserDisabled /t REG_DWORD /d 1 /f
+
